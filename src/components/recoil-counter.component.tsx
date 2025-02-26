@@ -23,7 +23,7 @@ const Count = () => {
 const Increase = () => {
   const setCount = useSetRecoilState(counterAtom);
 
-  return <button onClick={() => setCount((p) => p + 2)}>Increase</button>;
+  return <button onClick={() => setCount((p) => p + 2)} className="mr-4">Increase</button>;
 };
 
 const Decrease = () => {
