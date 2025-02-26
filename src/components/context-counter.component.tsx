@@ -2,14 +2,15 @@ import React from 'react'
 import { useCounter } from '../context/counter.context'
 
 const ContextCounterComp = () => {
-    const { count, setCount } = useCounter();
   return (
     <div className='flex flex-col gapy-y-2'>
+      <p className='font-bold'>Using Context API</p>
+        <Count />
         <div>
             <Increase />
             <Decrease />
         </div>
-        <Count />
+        <IsEven />
     </div>
   )
 }
@@ -33,6 +34,14 @@ const Count = () => {
     const { setCount } = useCounter();
     return (
         <button onClick={() => setCount(p => p-1)}>Decrease</button>
+    )
+  }
+
+  const IsEven = () => {
+    const {count} = useCounter();
+    const isEven = count % 2 === 0;
+    return (
+      <p>{isEven ? "Even" : "Odd"}</p>
     )
   }
 

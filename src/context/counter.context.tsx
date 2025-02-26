@@ -16,7 +16,7 @@ const CounterProvider = ({children}: {children: React.ReactNode}) => {
 }
 
 export const useCounter = (): CounterContextType => {
-    const counterContext = undefined;
+    const counterContext = useContext(CounterContext);
     if(!counterContext) {
         throw new Error('useCounter must be used inside within the  counter provider');
     }
