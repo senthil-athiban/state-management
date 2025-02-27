@@ -5,9 +5,10 @@ import RecoilCounter from "./components/recoil-counter.component";
 import ReduxCounter from "./components/redux-counter.component";
 import ReduxUser from "./components/redux-user.component";
 import RecoilUser from "./components/recoil-user.component";
-import SignIn from "./components/signin.component";
-import "./App.css";
 import Profile from "./components/profile.component";
+import RecoilLogin from "./components/recoil-login.component";
+import ReduxLogin from "./components/redux-login.component";
+import "./App.css";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         {/* Recoil examples */}
         <RecoilCounter />
         <RecoilUser />
+        <RecoilLogin />
 
         {/* ContextAPI examples */}
         <ContextCounterComp />
@@ -23,7 +25,7 @@ function App() {
         {/* Redux examples */}
           <ReduxCounter />
           <ReduxUser />
-          <SignIn />
+          <ReduxLogin />
           <Profile />
       </div>
     </ErrorBoundary>

@@ -1,8 +1,8 @@
 import { useState } from "react"
-import { useAppDispatch, useAppSelector } from "../hooks/useRedux"
+import { useAppDispatch } from "../hooks/useRedux"
 import { signIn } from "../redux-store/slices/userSlice"
 
-const SignIn = () => {
+const ReduxLogin = () => {
 
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -40,4 +40,4 @@ const SignIn = () => {
     )
   }
 
-  export default SignIn;
+  export default ReduxLogin;
