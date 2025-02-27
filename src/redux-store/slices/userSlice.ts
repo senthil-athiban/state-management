@@ -1,4 +1,4 @@
-import { configureStore, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 const userSlice = createSlice({
   name: "user",
@@ -15,6 +15,24 @@ const userSlice = createSlice({
     },
   },
 });
+
+const loginUserSlice = createSlice({
+  name: 'login',
+  initialState: {
+    user: {name: '', email: ''},
+    isLoggedIn: false,
+  },
+  reducers: {
+   signIn: (state, action) => {
+    state.user = {...state.user, ...action.payload};
+    state.isLoggedIn = true;
+   } ,
+   signOut: (state) => {
+    state.user = {name: '', email: ''};
+    state.isLoggedIn = false;
+   }
+  }
+})
 
 const postsSlice = createSlice({
   name: "posts",
@@ -48,7 +66,9 @@ const notificationsSlice = createSlice({
 export const { reducer: userReducer } = userSlice;
 export const { reducer: postReducer } = postsSlice;
 export const { reducer: notificationReducer } = notificationsSlice;
+export const { reducer: loginReducer } = loginUserSlice;
 
 export const { updateName, updatePreferences } = userSlice.actions;
 export const { setPosts, setLoading } = postsSlice.actions;
 export const { addNotification, clearNotifications } = notificationsSlice.actions;
+export const { signIn, signOut } = loginUserSlice.actions;
