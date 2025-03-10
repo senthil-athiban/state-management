@@ -1,5 +1,5 @@
 import React from "react";
-import { useRecoilValue, useSetRecoilState } from "recoil";
+import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
 import { counterAtom } from "../recoil-store/atoms/counterAtom";
 import { evenSelector } from "../recoil-store/selectors/counterSelector";
 
@@ -21,7 +21,7 @@ const Count = () => {
 };
 
 const Increase = () => {
-  const setCount = useSetRecoilState(counterAtom);
+  const [count, setCount] = useRecoilState(counterAtom);
 
   return <button onClick={() => setCount((p) => p + 2)} className="mr-4">Increase</button>;
 };

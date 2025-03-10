@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { userAtom } from "../recoil-store/atoms/userAtom";
 import { userNameSelector, userPreferenceSelector } from "../recoil-store/selectors/userSelector";
@@ -36,8 +36,7 @@ const UserProfile = () => {
 const ThemeSettings = () => {
     const setUser = useSetRecoilState(userAtom);
     const preferences = useRecoilValue(userPreferenceSelector);
-
-    const handleThemeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const handleThemeChange = useCallback((e: React.ChangeEvent<HTMLSelectElement>) => {
         setUser((prev) => ({
           ...prev,
           preferences: {
@@ -45,7 +44,7 @@ const ThemeSettings = () => {
             theme: e.target.value
           }
         }));
-      };
+      },[])
 
   return (
     <div className="flex gap-x-2">

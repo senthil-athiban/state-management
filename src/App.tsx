@@ -14,19 +14,19 @@ function App() {
   return (
     <ErrorBoundary>
       <div className="space-y-12">
-        {/* Recoil examples */}
+        {/* Counter examples */}
+        {/* <ContextCounterComp />
         <RecoilCounter />
-        <RecoilUser />
+        <ReduxCounter /> */}
+
+        {/* User Dashboard examples */}
+        {/* <RecoilUser />
+        <ReduxUser /> */}
+
+        {/* Auth examples */}
         <RecoilLogin />
-
-        {/* ContextAPI examples */}
-        <ContextCounterComp />
-
-        {/* Redux examples */}
-          <ReduxCounter />
-          <ReduxUser />
-          <ReduxLogin />
-          <Profile />
+        {/* <ReduxLogin />
+        <Profile /> */}
       </div>
     </ErrorBoundary>
   );

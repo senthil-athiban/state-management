@@ -19,14 +19,14 @@ const Count = memo(() => {
 });
 
 const Increase = memo(() => {
-  const { setCount } = useCounter();
+  const { increment } = useCounter();
 
-  return <button onClick={() => setCount((p) => p + 1)} className="mr-4">Increase</button>;
+  return <button onClick={increment} className="mr-4">Increase</button>;
 });
 
 const Decrease = memo(() => {
-  const { setCount } = useCounter();
-  return <button onClick={() => setCount((p) => p - 1)}>Decrease</button>;
+  const { decrement } = useCounter();
+  return <button onClick={decrement}>Decrease</button>;
 });
 
 const IsEven = memo(() => {
