@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useAppDispatch, useAppSelector } from "../hooks/useRedux";
 import { increment, decrement, selectCount, selectIsEven } from "../redux-store/slices/counterSlice";
 

@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useSelector, useDispatch } from "react-redux";
 import { updateName, updatePreferences } from "../redux-store/slices/userSlice";
 
@@ -46,17 +46,4 @@ const ThemeSettings = () => {
     </div>
   );
 };
-
-const NotificationBell = () => {
-  const count = useSelector((state: any) => state.notifications.count);
-
-  console.log("NotificationBell rendered");
-
-  return (
-    <div>
-      <span>🔔 {count}</span>
-    </div>
-  );
-};
-
 export default ReduxUser

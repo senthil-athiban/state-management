@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import { memo } from "react";
 import { useCounter } from "../context/counter.context";
 
 const ContextCounterComp = () => {

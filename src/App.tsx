@@ -1,4 +1,4 @@
-import React from "react";
+
 import ContextCounterComp from "./components/context-counter.component";
 import ErrorBoundary from "./components/error-boundary.component";
 import RecoilCounter from "./components/recoil-counter.component";
@@ -7,26 +7,26 @@ import ReduxUser from "./components/redux-user.component";
 import RecoilUser from "./components/recoil-user.component";
 import Profile from "./components/profile.component";
 import RecoilLogin from "./components/recoil-login.component";
-import ReduxLogin from "./components/redux-login.component";
 import "./App.css";
+import ReduxLogin from "./components/redux-login.component";
 
 function App() {
   return (
     <ErrorBoundary>
       <div className="space-y-12">
         {/* Counter examples */}
-        {/* <ContextCounterComp />
+        <ContextCounterComp />
         <RecoilCounter />
-        <ReduxCounter /> */}
+        <ReduxCounter />
 
         {/* User Dashboard examples */}
-        {/* <RecoilUser />
-        <ReduxUser /> */}
+        <RecoilUser />
+        <ReduxUser />
 
         {/* Auth examples */}
         <RecoilLogin />
-        {/* <ReduxLogin />
-        <Profile /> */}
+        <ReduxLogin />
+        <Profile />
       </div>
     </ErrorBoundary>
   );

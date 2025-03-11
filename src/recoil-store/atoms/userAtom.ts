@@ -74,7 +74,7 @@ export const userLoginSelector = selector({
     const user = get(userLoginState);
     return user
   },
-  set: ({set, reset}, newValue) => {
+  set: ({ reset}, newValue) => {
     if (newValue instanceof DefaultValue) {
       // Reset the atom
       reset(userLoginState);
