@@ -5,10 +5,7 @@ import RecoilCounter from "./components/recoil-counter.component";
 import ReduxCounter from "./components/redux-counter.component";
 import ReduxUser from "./components/redux-user.component";
 import RecoilUser from "./components/recoil-user.component";
-import Profile from "./components/profile.component";
-import RecoilLogin from "./components/recoil-login.component";
 import "./App.css";
-import ReduxLogin from "./components/redux-login.component";
 
 function App() {
   return (
@@ -22,11 +19,6 @@ function App() {
         {/* User Dashboard examples */}
         <RecoilUser />
         <ReduxUser />
-
-        {/* Auth examples */}
-        <RecoilLogin />
-        <ReduxLogin />
-        <Profile />
       </div>
     </ErrorBoundary>
   );
